@@ -101,7 +101,7 @@ If you need [click here](https://learning.postman.com/docs/getting-started/impor
 >if you need to re-execute it, it is recommended to clean the database or restart the application.
 
 <details>
-<summary><b>For integration test after run aplication:</b></summary>  
+<summary><b>Run integration test:</b></summary>  
 
 * 1 - Click on the button marked to the left with the number one.
 * 2 - Click Run 
