@@ -1,5 +1,11 @@
 # challenge-developper-api-rest
 
+<p align="left">
+    <a href="https://github.com/axsilva1991/challenge-developper-api-rest/actions">
+      <img alt="Build" src="https://github.com/axsilva1991/challenge-developper-api-rest/actions/workflows/build.yml/badge.svg" />
+    </a>
+</p>
+
 This repository is a implementation an academic project for the creation of a fictitious digital bank.
 
 

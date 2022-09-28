@@ -1,4 +1,4 @@
-name: Build Challenge-developper-api-rest-webapp
+name: Build 
 
 on: [push]
 
