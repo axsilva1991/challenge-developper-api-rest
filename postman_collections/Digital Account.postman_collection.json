@@ -1,0 +1,649 @@
+{
+	"id": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+	"name": "Digital Account",
+	"description": "",
+	"order": [
+		"e2a60912-890f-5213-b068-05bde6183f1d",
+		"78344c69-8587-bd6d-3a41-208e314e694d",
+		"bcd44201-d95c-c7fd-062c-a07e1f6c5d28",
+		"b110c5e3-d22b-3260-0078-cba49716700d",
+		"46a38310-a41b-c705-b77a-950016418e0b",
+		"ac330770-0fe8-7c5e-c0fa-f9824a7e7723",
+		"850c66ce-3694-5994-6dfe-317ca0e41165",
+		"d961cdc0-b777-4f9c-5dbf-53a8013f7399",
+		"8c8ab9f3-009e-0245-54af-4e9cdbfdf893",
+		"100236bd-4ec6-4df2-49c2-a6f658d0e9c4",
+		"6ecff874-ecf9-c4db-c626-b1ff969c2460",
+		"b9a71825-bc94-f550-8a75-1a544ec27a6a",
+		"0e7c4967-eb97-a94b-0808-70dad5623938",
+		"db1ddfab-1343-a2a0-d308-7a23b9bedfc9",
+		"d024f16a-9393-78b8-5a68-22a06ec8edb6",
+		"aff0a80e-6c77-9603-bf3c-43b75d692cad",
+		"53bf8547-1081-56ed-09c0-cb1af44caf87",
+		"21b21851-5dd7-d2d2-4df6-efd78549a921",
+		"a6adee6a-9afc-a90d-f378-1dbd82a750bc",
+		"883c5c4d-7903-83f4-286b-57fb5d35b3f4"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1655141818207,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "0e7c4967-eb97-a94b-0808-70dad5623938",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/25918418024",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655336973291,
+			"name": "13 - Get Account By Document - Account 1",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"documentNumber\":\"38657312875\",\n\t\"name\":\"Teste\"\n}\n"
+		},
+		{
+			"id": "100236bd-4ec6-4df2-49c2-a6f658d0e9c4",
+			"headers": "Content-Type: application/json\nactive: false\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "active",
+					"value": "false",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/situation/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"Body matches string\"] = responseBody.has(\"false\");",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655336013694,
+			"name": "10 - Lock Account",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "21b21851-5dd7-d2d2-4df6-efd78549a921",
+			"headers": "Content-Type: application/json\ndays: 10\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "days",
+					"value": "10",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/statement/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655346251548,
+			"name": "18 - Get Statement By Code and days Period",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"documentNumber\":\"38657312875\",\n\t\"name\":\"Teste\"\n}\n"
+		},
+		{
+			"id": "46a38310-a41b-c705-b77a-950016418e0b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/25918418024",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655335735223,
+			"name": "5 - Get Account By Document",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"documentNumber\":\"38657312875\",\n\t\"name\":\"Teste\"\n}\n"
+		},
+		{
+			"id": "53bf8547-1081-56ed-09c0-cb1af44caf87",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/withdraw",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 400\"] = responseCode.code === 400;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655339347081,
+			"name": "17 - Withdraw Account - Value invalid",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"accountCode\":1,\n\t\"money\":200000.0\n}\n"
+		},
+		{
+			"id": "6ecff874-ecf9-c4db-c626-b1ff969c2460",
+			"headers": "Content-Type: application/json\nactive: true\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "active",
+					"value": "true",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/situation/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"Body matches string\"] = responseBody.has(\"true\");",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655336026987,
+			"name": "11 - Activate Account",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "78344c69-8587-bd6d-3a41-208e314e694d",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "\r\ntests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655335638582,
+			"name": "2 - Open Account - Sucess - 2",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"documentNumber\":\"38657312875\",\n\t\"name\":\"Teste\"\n}\n"
+		},
+		{
+			"id": "850c66ce-3694-5994-6dfe-317ca0e41165",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/deposit",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655336976945,
+			"name": "7 - Deposit Account - Sucess",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"accountCode\":1,\n\t\"money\":20000.0\n}\n"
+		},
+		{
+			"id": "883c5c4d-7903-83f4-286b-57fb5d35b3f4",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/cancel/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 404\"] = responseCode.code === 404;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655347482556,
+			"name": "20 - Cancel Account",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "8c8ab9f3-009e-0245-54af-4e9cdbfdf893",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/deposit",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 400\"] = responseCode.code === 400;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655335849671,
+			"name": "9 - Deposit Account - Account Invalid",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"accountCode\":-1,\n\t\"money\":2.0\n}\n"
+		},
+		{
+			"id": "a6adee6a-9afc-a90d-f378-1dbd82a750bc",
+			"headers": "Content-Type: application/json\ndays: 100\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "days",
+					"value": "100",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/statement/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 400\"] = responseCode.code === 400;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655344353216,
+			"name": "19 - Get Statement By Code and days Period return bad request",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"documentNumber\":\"38657312875\",\n\t\"name\":\"Teste\"\n}\n"
+		},
+		{
+			"id": "ac330770-0fe8-7c5e-c0fa-f9824a7e7723",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/38657312874",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 404\"] = responseCode.code === 404;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655335816475,
+			"name": "6 - Get Account By Document - Not Found",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"documentNumber\":\"38657312875\",\n\t\"name\":\"Teste\"\n}\n"
+		},
+		{
+			"id": "aff0a80e-6c77-9603-bf3c-43b75d692cad",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/withdraw",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 400\"] = responseCode.code === 400;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655336970457,
+			"name": "16 - Withdraw Account - Error Account Invalid",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"accountCode\":-1,\n\t\"money\":2.0\n}\n"
+		},
+		{
+			"id": "b110c5e3-d22b-3260-0078-cba49716700d",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 400\"] = responseCode.code === 400;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655335710423,
+			"name": "4 - Open Account - Error Document Invalid",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"documentNumber\":\"38657312874\",\n\t\"name\":\"Teste\"\n}\n"
+		},
+		{
+			"id": "b9a71825-bc94-f550-8a75-1a544ec27a6a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/transfer",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655336060981,
+			"name": "12 - Trasfer Account - Sucess",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"origin\":1,\n\t\"destination\":2,\n\t\"money\":50\n}\n"
+		},
+		{
+			"id": "bcd44201-d95c-c7fd-062c-a07e1f6c5d28",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 400\"] = responseCode.code === 400;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655335678899,
+			"name": "3 - Open Account - Account Already Exists",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"documentNumber\":\"25918418024\",\n\t\"name\":\"Teste\"\n}\n"
+		},
+		{
+			"id": "d024f16a-9393-78b8-5a68-22a06ec8edb6",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/withdraw",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655336978608,
+			"name": "15 - Withdraw Account - Sucess",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"accountCode\":1,\n\t\"money\":100.0\n}\n"
+		},
+		{
+			"id": "d961cdc0-b777-4f9c-5dbf-53a8013f7399",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/deposit",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 400\"] = responseCode.code === 400;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655335834933,
+			"name": "8 - Deposit Account - Balance Negative",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"accountCode\":1,\n\t\"money\":-2.0\n}\n"
+		},
+		{
+			"id": "db1ddfab-1343-a2a0-d308-7a23b9bedfc9",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account/38657312875",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655336975022,
+			"name": "14 - Get Account By Document - Account 2",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"documentNumber\":\"38657312875\",\n\t\"name\":\"Teste\"\n}\n"
+		},
+		{
+			"id": "e2a60912-890f-5213-b068-05bde6183f1d",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/v1/account",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "\r\ntests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1655335641780,
+			"name": "1 - Open Account - Sucess - 1",
+			"description": "",
+			"collectionId": "05eb1efc-05e9-e72f-fe3d-fdda17511bc4",
+			"responses": [],
+			"rawModeData": "{\n\t\"documentNumber\":\"25918418024\",\n\t\"name\":\"Teste\"\n}\n"
+		}
+	]
+}
