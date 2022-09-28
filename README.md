@@ -70,12 +70,6 @@ $ docker-compose down
 <details>
 <summary><b>Kubernetes</b></summary>  
 
-After build image docker local, run ```docker images``` command and confirm if **digital_account_webapp** was created
-```bash
-REPOSITORY                                                TAG                                                                          IMAGE ID       CREATED             SIZE
-challenge-developper-api-rest_webapp                                    latest                                                                       e3e73a0811cc   About an hour ago   1.28GB
-```
-
 Run command for create service
 
 ```bash
