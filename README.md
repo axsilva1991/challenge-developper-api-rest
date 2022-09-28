@@ -70,14 +70,14 @@ Run command for create service
 ```bash
 $ cd .\challenge-developper-api-rest_webapp\
 $ .\kubernetes> kubectl apply -f .\kubernetes\service.yaml
-service/digital-account-webapp-svc created
+service/challenge-developper-api-rest-webapp-svc created
 ```
 Run command for create deployment
 
 ```bash
 $ cd .\challenge-developper-api-rest_webapp\
 $ .\kubernetes> kubectl apply -f .\kubernetes\deployment.yaml
-deployment.apps/digital-account-webapp-k8s created
+deployment.apps/challenge-developper-api-rest-webapp-k8s created
 ```
 
 After run this commands access [swagger](http://localhost:8080/api-docs/swagger-ui/index.html) to validate application its ok.
