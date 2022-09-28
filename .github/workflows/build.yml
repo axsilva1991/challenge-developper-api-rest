@@ -17,3 +17,5 @@ jobs:
         run: gradle build
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag challenge-developper-api-rest_webapp:$(date +%s)
+      - uses: actions/checkout@master
+      - uses: codecov/codecov-action@v3
