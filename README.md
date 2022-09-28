@@ -1,4 +1,9 @@
-# Functional requirements for challenge
+# challenge-developper-api-rest
+
+This repository is a implementation an academic project for the creation of a fictitious digital bank.
+
+
+## Functional requirements for challenge
 
 You need to create a digital bank when:
 
