@@ -10,10 +10,13 @@ import br.com.bank.digital_account.usecase.mapper.DepositOutputReqDTOMapper.Comp
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
 import org.junit.jupiter.api.assertThrows
+import org.mockito.Mockito
 import org.mockito.Mockito.`when`
-import org.mockito.Mockito.spy
-import org.mockito.Mockito.mock
 import org.mockito.Mockito.doNothing
+import org.mockito.Mockito.inOrder
+import org.mockito.Mockito.mock
+import org.mockito.Mockito.spy
+
 
 class AccountUseCaseTest {
 
@@ -28,6 +31,9 @@ class AccountUseCaseTest {
         doNothing().`when`(accountRepository).create(account.mapperFrom())
         `when`(accountRepository.created(document)).thenReturn(false)
         assertDoesNotThrow { accountUseCase.open(name = name, documentCode = document) }
+        val inOrder = inOrder(accountRepository)
+        inOrder.verify(accountRepository, Mockito.times(1)).created(document)
+        inOrder.verify(accountRepository, Mockito.times(1)).create(account.mapperFrom())
     }
 
     @Test
