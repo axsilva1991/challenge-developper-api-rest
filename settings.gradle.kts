@@ -1,1 +1,1 @@
-rootProject.name = "digital_account"
+rootProject.name = "challenge-developper-api-rest_webapp"

@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: digital-account-webapp-k8s
+  name: challenge-developper-api-rest-webapp-k8s
 spec:
   selector:
     matchLabels:
-      app: digital-account-webapp-k8s
+      app: challenge-developper-api-rest-webapp-k8s
   replicas: 1
   template:
     metadata:
       labels:
-        app: digital-account-webapp-k8s
+        app: challenge-developper-api-rest-webapp-k8s
     spec:
       containers:
-        - name: digital-account-webapp-k8s
-          image: digital_account_webapp:latest
+        - name: challenge-developper-api-rest-webapp-k8s
+          image: challenge-developper-api-rest_webapp:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080

@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: digital-account-webapp-svc
+  name: challenge-developper-api-rest-webapp-svc
 spec:
   selector:
-    app: digital-account-webapp-k8s
+    app: challenge-developper-api-rest-webapp-k8s
   ports:
     - port: 8080
       nodePort: 30001

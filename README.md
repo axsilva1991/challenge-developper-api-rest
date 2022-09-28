@@ -44,14 +44,14 @@ You need to create a digital bank when:
 
 ### Run
 ```bash
-$ cd .\digital_account\
+$ cd .\challenge-developper-api-rest_webapp\
 $ docker-compose up --build -d
 ```
 
 ### Shut down
 
 ```bash
-cd .\digital_account\
+cd .\challenge-developper-api-rest_webapp\
 $ docker-compose down
 ```
 </details>
@@ -62,20 +62,20 @@ $ docker-compose down
 After build image docker local, run ```docker images``` command and confirm if **digital_account_webapp** was created
 ```bash
 REPOSITORY                                                TAG                                                                          IMAGE ID       CREATED             SIZE
-digital_account_webapp                                    latest                                                                       e3e73a0811cc   About an hour ago   1.28GB
+challenge-developper-api-rest_webapp                                    latest                                                                       e3e73a0811cc   About an hour ago   1.28GB
 ```
 
 Run command for create service
 
 ```bash
-$ cd .\digital_account\
+$ cd .\challenge-developper-api-rest_webapp\
 $ .\kubernetes> kubectl apply -f .\kubernetes\service.yaml
 service/digital-account-webapp-svc created
 ```
 Run command for create deployment
 
 ```bash
-$ cd .\digital_account\
+$ cd .\challenge-developper-api-rest_webapp\
 $ .\kubernetes> kubectl apply -f .\kubernetes\deployment.yaml
 deployment.apps/digital-account-webapp-k8s created
 ```
