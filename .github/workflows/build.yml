@@ -15,7 +15,8 @@ jobs:
           distribution: 'adopt'
       - name: Build with Gradle
         run: gradle build
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag challenge-developper-api-rest_webapp:$(date +%s)
-      - uses: actions/checkout@master
-      - uses: codecov/codecov-action@v3
+
