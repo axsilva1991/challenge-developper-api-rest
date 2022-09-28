@@ -46,3 +46,11 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+tasks.jacocoTestReport {
+	reports {
+		html.required
+		xml.isEnabled = false
+		csv.isEnabled = false
+	}
+}
