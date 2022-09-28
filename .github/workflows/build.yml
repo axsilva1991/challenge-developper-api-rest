@@ -16,7 +16,7 @@ jobs:
       - name: Build with Gradle
         run: gradle build
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        run: bash <(curl -s https://codecov.io/bash)
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag challenge-developper-api-rest_webapp:$(date +%s)
 
