@@ -14,7 +14,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Dependency Check analyzer
-        run: gradlew dependencyCheckAnalyze
+        run: gradle dependencyCheckAnalyze
       - name: Build with Gradle
         run: gradle build
       - name: Upload coverage to Codecov
