@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.7.0"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
+	id("org.owasp.dependencycheck") version "8.2.1"
 	kotlin("jvm") version "1.6.21"
 	kotlin("plugin.spring") version "1.6.21"
 	jacoco
@@ -16,6 +17,8 @@ repositories {
 	mavenCentral()
 }
 
+apply(plugin = "org.owasp.dependencycheck")
+
 extra["springCloudVersion"] = "2021.0.3"
 
 dependencies {
@@ -28,6 +31,9 @@ dependencies {
 	implementation("org.springdoc:springdoc-openapi-ui:1.6.4")
 	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation("org.owasp:dependency-check-gradle:8.2.1")
+
+
 }
 
 dependencyManagement {
