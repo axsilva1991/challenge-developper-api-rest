@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.7.0"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
-	id("org.owasp.dependencycheck") version "8.2.1"
+	id("org.owasp.dependencycheck") version "8.1.2" apply false
 	kotlin("jvm") version "1.6.21"
 	kotlin("plugin.spring") version "1.6.21"
 	jacoco
@@ -17,7 +17,13 @@ repositories {
 	mavenCentral()
 }
 
-apply(plugin = "org.owasp.dependencycheck")
+allprojects {
+	apply(plugin = "org.owasp.dependencycheck")
+}
+
+configure<org.owasp.dependencycheck.gradle.extension.DependencyCheckExtension> {
+	format = org.owasp.dependencycheck.reporting.ReportGenerator.Format.ALL.toString()
+}
 
 extra["springCloudVersion"] = "2021.0.3"
 
