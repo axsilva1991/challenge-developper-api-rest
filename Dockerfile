@@ -1,10 +1,10 @@
-FROM gradle:7.0.0-jdk11 as cache
+FROM gradle:7.0.0-jdk17 as cache
 ENV GRADLE_USER_HOME /home/gradle/cache_home
 COPY build.gradle.kts /home/gradle/java-code/
 WORKDIR /home/gradle/java-code
 RUN gradle build -i --no-daemon || return 0
 
-FROM gradle:7.0.0-jdk11 as runner
+FROM gradle:7.0.0-jdk17 as runner
 COPY --from=cache /home/gradle/cache_home /home/gradle/.gradle
 COPY . /usr/src/java-code/
 WORKDIR /usr/src/java-code
