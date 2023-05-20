@@ -38,8 +38,8 @@ dependencies {
 	runtimeOnly("com.h2database:h2:2.1.214")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation("org.owasp:dependency-check-gradle:8.2.1")
-
-
+	implementation("org.yaml:snakeyaml:2.0")
+	implementation("com.google.guava:guava:31.1-jre")
 }
 
 dependencyManagement {
