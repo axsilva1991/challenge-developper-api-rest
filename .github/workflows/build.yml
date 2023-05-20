@@ -15,7 +15,7 @@ jobs:
           distribution: 'adopt'
       - name: Build with Gradle
         run: gradle build
-      - name: Dependency Check OWSA
+      - name: Dependency Check OWSAP
         run: gradle dependencyCheckAnalyze
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
